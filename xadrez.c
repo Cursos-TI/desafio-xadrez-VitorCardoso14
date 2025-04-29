@@ -7,7 +7,7 @@ int main() {
     int b = 1;
     while (b <= 5)
     {
-    printf("Superior Direita\n");
+    printf("Cima, Direita\n");
     b++;
     }
 
