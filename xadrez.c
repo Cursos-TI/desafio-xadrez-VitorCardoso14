@@ -1,10 +1,34 @@
 #include <stdio.h>
 
+
+void moveBispo(int bispo){
+if (bispo > 0){
+    printf("Cima, Direita\n");
+    moveBispo(bispo - 1);
+  }
+}
+void moveRainha(int rainha){
+    if (rainha > 0){
+        printf("Direita\n");
+        moveRainha(rainha - 1);
+      }
+    }
+
 int main() {
+    printf("Bispo:\n");
+moveBispo(5);
+
+printf("Rainha:\n");
+moveRainha(8);
+
+
+
 
     int moveCavalo, i = 1;
 
+
 //usando while para Torre se mover
+ /*
     printf("Bispo:\n");
     int b = 1;
     while (b <= 5)
@@ -12,8 +36,10 @@ int main() {
     printf("Cima, Direita\n");
     b++;
     }
+*/
 
 //usando o do while para Rainha se mover
+/*
     printf("Rainha:\n");
     int r = 1;
     do
@@ -21,15 +47,16 @@ int main() {
     printf("Esquerda\n");
     r++;
     } while (r <= 8);
-    
+*/
     
 //usando for para Torre se mover
+/*
         printf("Torre:\n");
     for (int t = 0; t < 5; t++)
     {
         printf("Direita\n");
     }
-
+*/
 
      printf("Mova o cavalo:\n");
      printf("1.Cima, Cima e Direita.\n");
