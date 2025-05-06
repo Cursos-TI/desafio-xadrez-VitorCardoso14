@@ -15,7 +15,7 @@ void moveBispod(int bispod){
 }
 void moveRainha(int rainha){
     if (rainha > 0){
-        printf("Direita\n");
+        printf("Esquerda\n");
         moveRainha(rainha - 1);
       }
     }
