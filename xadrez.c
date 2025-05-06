@@ -1,11 +1,17 @@
 #include <stdio.h>
 
-
+//void para fazer a recursividade
 void moveBispo(int bispo){
 if (bispo > 0){
-    printf("Cima, Direita\n");
+    printf("Cima\n");
     moveBispo(bispo - 1);
   }
+}
+void moveBispod(int bispod){
+    if (bispod > 0){
+    printf("Direita\n");
+    moveBispod(bispod - 1);
+   }
 }
 void moveRainha(int rainha){
     if (rainha > 0){
@@ -13,18 +19,57 @@ void moveRainha(int rainha){
         moveRainha(rainha - 1);
       }
     }
+void moveTorre(int torre){
+    if (torre > 0){
+        printf("Direita\n");
+        moveTorre(torre - 1);
+      }
+        }
 
 int main() {
-    printf("Bispo:\n");
-moveBispo(5);
 
-printf("Rainha:\n");
+//recursividade
+
+printf("-Bispo:\n");
+moveBispo(5);
+moveBispod(5);
+
+printf("-Rainha:\n");
 moveRainha(8);
 
+printf("-Torre:\n");
+moveTorre(5);
+
+//loop aninhado para o bispo
+
+printf("-Bispo:\n");
 
 
+for (int i = 1; i <= 5; i++)
+    {
+        for (int j = 1; j <= 1; j++)
+        {
+        printf("Cima\n");
+        }
+        printf("Direita\n");
+    }
 
     int moveCavalo, i = 1;
+
+//usando continue e break no cavalo
+
+    printf("-Cavalo:\n");
+for (int i = 0; i < 1; i++)
+{
+for (int j = 1; j < 3; j++)
+{
+    if (i == 1) continue;
+    if (i == 3) break;
+    printf("Direita\n");
+}
+printf("Cima\n");
+}
+
 
 
 //usando while para Torre se mover
